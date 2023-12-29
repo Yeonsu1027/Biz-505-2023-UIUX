@@ -30,7 +30,7 @@ section article {
   text-align: center;
   display: flex;
 
-  flex-direction: column;
+  flex-direction: column; /*이것도 빼도??*/
   margin: 10px;
 }
 
