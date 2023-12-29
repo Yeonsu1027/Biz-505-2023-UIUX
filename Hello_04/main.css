@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100vh; /* 스크롤안만들게 html자체를 화면크기에 맞추고*/
+}
+body {
+  height: 70%; /*임의로 조정*/
+}
+body header {
+  background-color: rgb(127, 174, 255);
+  text-align: center;
+  color: white;
+  padding: 5%;
+}
+section {
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid blue;
+  display: flex;
+}
+section article {
+  flex: 1;
+  align-items: center; /*이거없어도 되는데 뭐지이거*/
+  justify-content: center;
+
+  text-align: center;
+  display: flex;
+
+  flex-direction: column;
+  margin: 10px;
+}
+
+section article img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  text-align: center;
+}
+
+section article img:hover {
+  border: 2px solid palevioletred;
+}
+
+nav {
+  background-color: rgb(202, 255, 96);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 5px;
+}
+nav li a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+ul li:hover {
+  background-color: rgb(134, 198, 78);
+  transition: 0.7s;
+}
+footer {
+  border: solid skyblue;
+  text-align: center;
+  background-color: rgb(235, 254, 255);
+  padding: 0.7rem;
+
+  position: fixed; /*화면아래에 고정*/
+  bottom: 0;
+  width: 100%;
+}
