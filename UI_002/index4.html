@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.add {
+        width: 100px;
+        border: 1px solid blue;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <lable>숫자1</lable>
+      <input id="num1" />
+    </div>
+    <div>
+      <lable>숫자2</lable>
+      <input id="num2" />
+    </div>
+    <div class="add">덧셈하기</div>
+  </body>
+  <script>
+    const num1 = document.querySelector("input#num1");
+    const num2 = document.querySelector("input#num2");
+    const btn_add = document.querySelector("div.add");
+
+    const btn_add_click_handler = () => {
+      //입력박스에 입력하면 다문자열임 //next.Line()비슷
+      //Number (Integer.valueof()랑 비슷:문자열을 숫자로)
+      const num1_value = Number(num1.value); //Number(앞에대문자:클래스이면서 변수)
+      const num2_value = Number(num2.value); // 입력한값이 value에담긴다
+      if (num1_value === 0) {
+        //입력안하면 0임.
+        alert("숫자 1은 반드시 입력하세요");
+        num1.focus(); //클릭한거 처럼하라. 커서 바가 숫자1칸으로감.
+        return false;
+      }
+      if (num1_value > 100) {
+        alert("숫자 1은 100보다 작게 입력하세요");
+        num1.select(); //작성한내용에 블럭씌워짐
+        return false;
+      }
+      if (num2_value === 0) {
+        alert("숫자 2는 반드시 입력하세요");
+        num2.focus();
+        return false;
+      }
+
+      alert(num1_value + num2_value);
+    };
+    btn_add.addEventListener("click", btn_add_click_handler);
+  </script>
+</html>
