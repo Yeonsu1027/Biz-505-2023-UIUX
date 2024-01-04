@@ -28,6 +28,7 @@
     const num2 = document.querySelector("input#num2");
     const btn_add = document.querySelector("div.add");
 
+    //------------------------------------------------------------------------------
     const btn_add_click_handler = () => {
       //입력박스에 입력하면 다문자열임 //next.Line()비슷
       //Number (Integer.valueof()랑 비슷:문자열을 숫자로)
@@ -52,6 +53,7 @@
 
       alert(num1_value + num2_value);
     };
+    //-------------------------------------------------------------------------------
     btn_add.addEventListener("click", btn_add_click_handler);
   </script>
 </html>
