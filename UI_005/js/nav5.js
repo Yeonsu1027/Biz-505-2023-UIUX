@@ -26,6 +26,7 @@ main_nav.addEventListener("click", (event) => {
     // 대문자로 해야함 li
     // alert("네비 요소 클릭 : " + nav_text);
     if (nav_text === "HOME") {
+      //home 은 import를 만들지않는다. 섹션에 홈이 또 생겨버린다..
       document.location.href = "./index.html";
     } else if (nav_text === "로그인") {
       importHTML(img_container, "./login.html");
