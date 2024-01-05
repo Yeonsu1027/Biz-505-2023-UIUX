@@ -10,4 +10,4 @@
 - `flex:정수` : flex-item 의 크기를 정하는 정수값 여러 item 이 같은 부모 box 에 포함될 경우 `flex:정수` 값에 따라 비율이 달리 그려진다
 
 * `flex-grow:정수` : flex item 의 증가 비율, 부모 box의 크기가 증가할때 item 의 크기가 증가하는데 이때 flex-graw 의 정해진 비율로 증가한다. `flex:정수` 속성은 `flex-grow:정수` 속성과 같다.
-* `flex-shrink:정수` : flex item 의 감소 비율, 부모 Box의 크기가 감소할때 item 의 크기가 감소하는데 이때 flex-shrink 의 정해진 비율로 감소한다 `flex:정수1 정수2` 로 속성을 지정하면 정수2의 값이 shrink 값이다. shrink 0 일경우 부모 box의 크기가 감소할때, basis 에 정해진 값보다 작아질려고 하는 경우
+* `flex-shrink:정수` : flex item 의 감소 비율, 부모 Box의 크기가 감소할때 item 의 크기가 감소하는데 이때 flex-shrink 의 정해진 비율로 감소한다 `flex:정수1 정수2` 로 속성을 지정하면 정수2의 값이 shrink 값이다. shrink 0 일경우 부모 box의 크기가 감소할때, basis 에 정해진 값보다 작아질려고 하는 경우 크기감소를 거부한다.
