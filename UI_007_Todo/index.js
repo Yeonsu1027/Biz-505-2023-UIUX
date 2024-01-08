@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       /*
         span tag에 close 클래스가 부착된 친구인가?
         */
-      if (target.classNaME === "close") {
+      if (target.className === "close") {
         // 삭제할지 물어보기
         //선택된 SPAN 태그가 close면
         if (confirm("TODO 를 삭제할까요?")) {
