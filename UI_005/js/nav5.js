@@ -22,6 +22,7 @@ main_nav.addEventListener("click", (event) => {
   const target = event.target; // event(클릭).된것 //""제일먼저 눌리는것""(제일위의것)이 ""타겟""이다.
   const tag_name = event.target.tagName; // 방금클릭된것의 tagname이 무엇이냐
   const nav_text = target.innerText;
+
   if (tag_name === "LI") {
     // 대문자로 해야함 li
     // alert("네비 요소 클릭 : " + nav_text);
