@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3개의 요소를 갖는 리스트 만들기
   const todoList = ["체육관가기", "HTML 책읽기", "책상정리", "영화보기", "라면먹기"];
 
-  const createLiTag = (todoContent) => {
+  const createLiTag = (todoContent) => { 
     // <span></span>  // span 태그를 만들어라
     const spanComplete = document.createElement("SPAN");
     const spanTodo = document.createElement("SPAN");
@@ -25,18 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
     spanTodo.classList.add("todo");
     spanClose.classList.add("close");
 
-    spanComplete.innerHTML = "&check;";
-    spanTodo.innerHTML = todoContent; //매개변수로 받은걸 여기에다가
-    spanClose.innerHTML = "&times;";
+    spanComplete.innerHTML = "&check;"; //체크표시 넣어주고/span1에
+    spanTodo.innerHTML = todoContent; //매개변수로 받은걸 여기에다가 //2에
+    spanClose.innerHTML = "&times;"; //x표시넣고 //3에
 
-    litag.appendChild(spanComplete); // .appendChild : 특정부모요소에 자식요소 추가
+    litag.appendChild(spanComplete); // .appendChild : 특정부모요소에 자식요소 추가 //litag안에 spancomplete요소넣기
     litag.appendChild(spanTodo);
     litag.appendChild(spanClose);
 
     ulContent.appendChild(litag);
   };
 
-  const createTodoList = () => {
+  const createTodoList = () => { //지금까지 만든 li들을 ul 컨텐츠안에넣기 ul>li 형식이니까
     ulContent.innerHTML = "";
     todoList.forEach((item) => createLiTag(item));
   };
@@ -99,18 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   const addBtn = document.querySelector("section.input button");
-  addBtn?.addEventListener("click", () => {
+  addBtn?.addEventListener("click", () => { // null아니면 실행하고
     const todo = todoInput.value;
     //todo 가 falsy(비어있으)면
     if (!todo) {
       alert("TO DO 내용을 입력해 주세요");
-      todoInput.select();
+      todoInput.select();//입력칸에 커서옮겨가게
       return false; // 입력이 안되면 더이상진행x
     }
     // List(배열)의 끝에 새로운 값을 추가하기
     todoList.push(todo);
     // createTodoList(); //함수실행
     createLiTag(todo); //위에는 리스트를 새로만드는거여서 새로추가하면 체크표시가 해제되버리니까
-    todoInput.value = "";
+    todoInput.value = ""; // 입력한칸 지우기
   }); // end addBtn click
 }); // DOMContentLoaded

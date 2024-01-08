@@ -70,7 +70,7 @@ section.list li {
   /* Browser 호환성 위한 설정 */
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
+  user-select: none; /* 더블클릭했을때 블럭x */
   padding: 0.9rem;
   transition: 0.3s;
 
