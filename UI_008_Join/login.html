@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의홈페이지</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/login.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"><img src="./images/my_logo.png" alt="나의 로고" width="200px" /></a>
+      </div>
+      <ul class="topmenu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">정보수정</a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">About..</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">자유게시판</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">비즈니스</a></li>
+      </ul>
+    </nav>
+    <section class="main">
+      <article class="login_body">
+        <h2>로그인</h2>
+        <form action="./login" method="post">
+          <!--post 로그인페이지에 id,ps 정보가 노출되지않는다.-->
+          <!-- name은 하나의변수와 같다 ""이름으로 서버에 전송된다 -->
+          <input name="username" placeholder="USERNAME" />
+          <input id="password" name="password" placeholder="PASSWORD" type="password" />
+          <!--입력칸*로-->
+          <button class="btn_login" type="button">로그인</button>
+          <!-- (form안에있을때만)submit 성질을 갖는다.-->
+          <!-- form 으로 감쌌을때 input의 정보를 서버로 전송하는 역할을해준다 -->
+        </form>
+      </article>
+    </section>
+    <footer><address>CopyRight &copy; rito1205@naver.com</address></footer>
+  </body>
+</html>
