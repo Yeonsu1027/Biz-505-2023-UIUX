@@ -12,7 +12,7 @@ body {
   flex-direction: column;
 }
 header {
-  padding: 0.8rem;
+  padding: 1.3rem;
   text-align: center;
   background-color: #aaa;
 }
@@ -50,10 +50,10 @@ div.image_list {
   margin: 0px auto;
   display: flex;
 }
-div.image_item {
+/* div.image_item {
   width: 100px;
   height: 100px;
-}
+} */
 div.image_list img {
   width: 100px;
   height: 100px;
