@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 10px;
+      }
+      /*
+      대표적인 inline tag button, input 등 몇몇은
+      HTML5 에서 inline-blick 의 성질을 갖는 tag 가 되었다
+      block : width, height 등이 적용되고, 보이는 공간과 실제 공간이 다르다
+      inline : width, height 등이 적용되지 않는 tag, 별도의 공간을 차지하지 않는다
+      inline-block : inline 과 block 의 성질을 동시에 갖는 tag
+        width, height 가 적용되고, 보이는 공간과 실제 차지하는 공간이 같다.
+        tag를 여러개 나열하면 가로방향으로 기본 나열된다
+      */
+      button.btn {
+        display: block /* 세로정렬 */;
+        width: 300px;
+        height: 50px;
+        margin: 10px auto;
+        padding: 8px;
+        background-color: cadetblue;
+        color: #333; /* 그외나머지 2초 */
+        transition: color 1s, width 0.5s, ease-in-out, all 2s; /* 그냥 transition은 모든요소가 1s */
+      }
+
+      /* 클래스가 두개 다 붙어있어야 */
+      /* 현재시점에선 button.hober1 과 비슷*/
+      button.btn.hover1:hover {
+        color: #fff;
+        width: 500px;
+      }
+
+      button.btn.hover2:hover {
+        box-shadow: 300px 0 0 0 #e01313 inset; /* inset 그림자가 안으로간다*/ /* 위의 css all 전체2초들어감 */
+      }
+
+      button.btn.hover3:hover {
+        /* 얜 오른쪽에서 시작 */
+        box-shadow: -300px 0 0 0 #e01313 inset;
+      }
+
+      button.btn.hover4:hover {
+        /* y좌표넣어서 위에서 아래로 /커튼같이 */
+        box-shadow: 0 50px 0 0 green inset;
+      }
+
+      button.btn.hover5:hover {
+        /* 위에서, 아래에서.. */
+        box-shadow: 0 50px 0 0 green inset, 0 -50px 0 0 green inset;
+      }
+
+      button.btn.hover6:hover {
+        /* 위에서, 아래에서.. */
+        box-shadow: 200px 0 0 0 green inset, -200px 0 0 0 green inset;
+      }
+
+      button.btn.hover7:hover {
+        width: 50px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼의 스타일</h1>
+    <button class="btn hover1">버튼 1</button>
+    <button class="btn hover2">버튼 2</button>
+    <button class="btn hover3">버튼 3</button>
+    <button class="btn hover4">버튼 4</button>
+    <button class="btn hover5">버튼 5</button>
+    <button class="btn hover6">버튼 6</button>
+    <button class="btn hover7">버튼 7</button>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+form.blog_write {
+  width: 80%;
+  margin: 10px auto;
+}
+form.blog_write div {
+  width: 60%;
+  margin: 3px auto;
+
+  display: flex;
+}
+form.block_write label,
+form.blog_write input,
+form.blog_write textarea {
+  margin: 5px;
+  padding: 8px;
+}
+
+form.blog_write lable {
+  flex: 1; /* 입력하는부분 꽉채움 */
+  text-align: right;
+  color: blue;
+  font-weight: bold;
+}
+form.blog_write input,
+form.blog_write textarea {
+  flex: 2; /* input과 text~의 가로비율 */
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #777; /* hover 굵기랑 같게해야 화면 안출렁거림 */
+}
+
+form.blog_write input:hover,
+form.blog_write textarea:hover {
+  background-color: #bbb;
+}
+form.blog_write input:focus,
+form.blog_write textarea:focus {
+  border: 2px solid green;
+}
