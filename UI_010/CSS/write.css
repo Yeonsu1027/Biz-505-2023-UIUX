@@ -29,7 +29,7 @@ form.blog_write textarea {
   padding: 8px;
 }
 
-form.blog_write lable {
+form.blog_write label {
   flex: 1; /* 입력하는부분 꽉채움 */
   text-align: right;
   color: blue;
